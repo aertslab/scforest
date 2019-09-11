@@ -171,7 +171,7 @@
 					]]
 					[, empty, edge=dotted[\href{https://pubs.rsc.org/en/content/articlelanding/2019/lc/c9lc00014c}{\textbf{Simplified Drop-seq}}\\\citealt{biocanin2019}, edge=dotted, fit=tight, tier=2019]]
 					[, empty, edge=dotted, tier=2016[\href{https://www.nature.com/articles/nmeth.4177}{\textbf{CROP-seq}}\\\citealt{datlinger2017}, edge=dotted, fit=tight, tier=2017]]
-					[, empty, edge=dotted, tier=2016b[\href{https://www.nature.com/articles/nbt.4038}{\textbf{snDrop-seq}}\\\citealt{lake2017}, edge=dotted, fit=tight, name=scTHS-seq, tier=2018]]
+					[, empty, edge=dotted, tier=2016b[\href{https://www.nature.com/articles/nbt.4038}{\textbf{snDrop-seq}}\\\citealt{lake2017}, edge=dotted, fit=tight, name=scTHS-seq, tier=2017]]
 				]]
 			]]
 		]]
@@ -206,7 +206,10 @@
 	[, empty, no edge[\href{https://www.nature.com/articles/nmeth.3035}{\textbf{scBS-seq}}\\\citealt{smallwood2014}, no edge, fit=band, name=scbs-seq, tier=2014
 		[\href{https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3847781/}{\textbf{scRRBS-seq}}\\\citealt{guo2015}, no edge, fit=band, name=scrrbs-seq, tier=2015]
 	]]
-	[, empty, no edge[\href{https://www.nature.com/articles/nmeth.2688}{\textbf{ATAC-seq\textsuperscript{\large{*}}}}\\\citealt{buenrostro2013}, no edge, calign=child, calign child=4, fit=tight, name=atac-seq, tier=2013
+	[, empty, no edge[\href{https://www.nature.com/articles/nmeth.2688}{\textbf{ATAC-seq\textsuperscript{\large{*}}}}\\\citealt{buenrostro2013}, no edge, calign=child, calign child=3, fit=tight, name=atac-seq, tier=2013
+		[, empty[\href{https://www.nature.com/articles/nmeth.4396}{\textbf{Omni-ATAC\textsuperscript{\large{*}}}}\\\citealt{corces2017}, fit=band, name=omni-atac, tier=2017
+			[, empty, edge=dotted[\href{https://www.nature.com/articles/s41467-018-07771-0}{\textbf{scATAC-seq}}\\\citealt{chen2018}, edge=dotted, fit=tight, tier=2018]]
+		]]
 		[, empty, edge=dotted, tier=2014b[\href{https://science.sciencemag.org/content/348/6237/910}{\textbf{sciATAC-seq}}\\\citealt{cusanovich2015}, edge=dotted, fit=tight, name=sciatac-seq, tier=2015
 			[, empty, edge=dotted[\href{https://www.nature.com/articles/nbt.4038}{\textbf{scTHS-seq}}\\\citealt{lake2017}, edge=dotted, fit=tight, name=scTHS-seq, tier=2018]]
 			[, empty, edge=dotted[\href{https://www.nature.com/articles/s41593-018-0079-3}{\textbf{snATAC-seq}}\\\citealt{preissl2018}, edge=dotted, fit=tight, name=scnatac-seq, tier=2018]]
@@ -215,10 +218,7 @@
 			[, empty, name=pre_dsciatac-seq[\href{https://www.nature.com/articles/s41587-019-0147-6}{\textbf{dsciATAC-seq}}\\\citealt{lareau2019}, fit=tight, name=dsciatac-seq, tier=2019]]
 			[, empty, name=prec1_scatac-seq[\href{https://www.nature.com/articles/nature14590}{\textbf{Perturb-ATAC}}\\\citealt{rubin2019}, fit=tight, name=perturb-atac, tier=2019]]
 		]]
-		[, no edge, empty, name=prec1_scatac-seq[\href{https://www.nature.com/articles/s41587-019-0206-z}{\textbf{scATAC-seq}}\\\citealt{satpathy2019}\\10x Genomics, no edge, fit=band, name=10x_scatac-seq, tier=2019]]
-		[, empty[\href{https://www.nature.com/articles/nmeth.4396}{\textbf{Omni-ATAC\textsuperscript{\large{*}}}}\\\citealt{corces2017}, fit=band, name=omni-atac, tier=2017
-			[, empty, edge=dotted[\href{https://www.nature.com/articles/s41467-018-07771-0}{\textbf{scATAC-seq}}\\\citealt{chen2018}, edge=dotted, fit=tight, tier=2018]]
-		]]
+		[, no edge, empty, name=prec1_scatac-seq[\href{https://www.nature.com/articles/s41587-019-0206-z}{\textbf{scATAC-seq}}\\\citealt{satpathy2019}\\10x Genomics, no edge, fit=tight, name=10x_scatac-seq, tier=2019]]
 		[, edge=dotted, empty[\href{https://www.nature.com/articles/nmeth.4031}{\textbf{ATAC-see\textsuperscript{\large{\textmu}}}}\\\citealt{chen2016}, edge=dotted, fit=tight, tier=2016]]
 	]]
 [, empty, no edge, [\href{https://www.nature.com/articles/nbt.3383}{\textbf{Drop-ChIP}}\\\citealt{rotem2015}, no edge, fit=band, tier=2015
@@ -278,7 +278,7 @@
 \draw[squiggly] (smart-seq2) -- (c1_scrna-seq2);
 \draw[squiggly] (c1_scrna-seq) -- (c1_scrna-seq2);
 \draw[squiggly] (atac-seq) -- (c1_scatac-seq);
-\draw[squiggly] (atac-seq) -- (10x_scatac-seq);
+\draw[squiggly] (atac-seq) to[out=310, in=110] (10x_scatac-seq);
 \draw[dotted, thick] (drop-seq) -- (presnare-seq);
 \draw[dotted, thick] (drop-seq) -- (cite-seq);
 \draw[dotted, thick] (drop-seq) -- (dronc-seq);
@@ -286,8 +286,8 @@
 \draw[dotted, thick] (smart-seq22) to[out=10, in=168] (sccat-seq);
 \draw[dotted, thick] (smart-seq22) to[out=357, in=160] (reyes_scrna/atac-seq);
 \draw[dotted, thick] (smart-seq22) to[out=5, in=170] (gt-seq);
-\draw[dotted, thick] (omni-atac) to[out=182, in=45] (sccat-seq);
-\draw[dotted, thick] (omni-atac) to[out=182, in=25] (reyes_scrna/atac-seq);
+\draw[dotted, thick] (omni-atac) -- (sccat-seq);
+\draw[dotted, thick] (omni-atac) -- (reyes_scrna/atac-seq);
 \draw[dotted, thick] (scbs-seq) -- (scmt-seq);
 \draw[dotted, thick] (gt-seq) -- (scmt-seq);
 \draw[dotted, thick] (gt-seq) -- (sctrio-seq);
