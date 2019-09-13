@@ -179,15 +179,17 @@
 		]]
 	]]
 	]
-	[, empty, no edge, tier=2013, name=prescirna-seq[\href{https://science.sciencemag.org/content/357/6352/661}{\textbf{sciRNA-seq}}\\\citealt{cao2017}, no edge, fit=tight, name=scirna-seq, tier=2017]]
+	[, empty, no edge, tier=2013, name=prescirna-seq[\href{https://science.sciencemag.org/content/357/6352/661}{\textbf{sciRNA-seq}}\\\citealt{cao2017}, no edge, fit=band, name=scirna-seq, tier=2017]]
 ]
 % multiomics
 [, no edge, tier=2012, tier=base
 	[, empty, no edge, fit=band, name=sep_multiomics, tier=2019b]
-	[, empty, no edge, fit=band[\href{https://www.nature.com/articles/nmeth.4380}{\textbf{CITE-seq\textsuperscript{\textbf{\large{+}}}}}\\\citealt{stoeckius2017}, no edge, fit=tight, name=cite-seq, tier=2017]]
-	[, empty, no edge, name=presnare-seq, tier=2017[\href{https://www.biorxiv.org/content/10.1101/692608v1}{\textbf{SNARE-seq\textsuperscript{\textbf{\large{+}}}}}\\\citealt{chen2019}, edge=dotted, fit=tight, tier=2019]]
+	[, empty, no edge, name=presnare-seq, tier=2017[\href{https://www.biorxiv.org/content/10.1101/692608v1}{\textbf{SNARE-seq\textsuperscript{\textbf{\large{+}}}}}\\\citealt{chen2019}, edge=dotted, fit=band, tier=2019]]
 	[, empty, no edge[\href{https://www.nature.com/articles/nmeth.3370}{\textbf{G{\&}T-seq\textsuperscript{\textbf{\large{+}}}}}\\\citealt{macaulay2015}, no edge, fit=band, name=gt-seq, tier=2015, calign=child, calign child=1
 		[, empty[\href{https://www.nature.com/articles/nprot.2016.138}{\textbf{G{\&}T-seq\textsuperscript{\textbf{\large{+}}}}}\\\citealt{macaulay2016}, fit=tight, tier=2016
+			[, empty, no edge, fit=band[\href{https://www.nature.com/articles/nmeth.4380}{\textbf{CITE-seq\textsuperscript{\textbf{\large{+}}}}}\\\citealt{stoeckius2017}, no edge, fit=tight, name=cite-seq, tier=2017
+				[, empty, no edge, fit=band[\href{https://www.sciencedirect.com/science/article/abs/pii/S1097276519306185}{\textbf{sci-L3\textsuperscript{\textbf{\large{+}}}}}\\\citealt{yin2019}, no edge, fit=tight, name=sci-l3, tier=2019]]
+			]]
 		]]
 	]]
 	[, empty, no edge[\href{https://www.nature.com/articles/nmeth.3728}{\textbf{scM\&T-seq\textsuperscript{\textbf{\large{+}}}}}\\\citealt{angermueller2016}, no edge, fit=tight, name=scmt-seq, tier=2016
@@ -200,7 +202,7 @@
 			]]
 		]]
 	]]
-	[, empty, no edge[\href{https://onlinelibrary.wiley.com/doi/full/10.1002/adbi.201900065}{\textbf{Reyes\textsuperscript{\textbf{\large{+}}}}}\\\href{https://www.nature.com/articles/s41467-018-08205}{\textbf{scRNA/ATAC-seq}}\\\citealt{reyes2019}, no edge, fit=tight, name=reyes_scrna/atac-seq, tier=2019]]
+	[, empty, no edge[\href{https://onlinelibrary.wiley.com/doi/full/10.1002/adbi.201900065}{\href{https://www.nature.com/articles/s41467-018-08205}{\textbf{scRNA/ATAC-seq\textsuperscript{\textbf{\large{+}}}}}}\\\citealt{reyes2019}, no edge, fit=tight, name=reyes_scrna/atac-seq, tier=2019]]
 ]
 % epigenomics
 [, no edge, tier=2012
@@ -298,6 +300,7 @@
 \draw[dotted, thick] (c1_scrna-seq) -- (prereap-seq);
 \draw[dotted, thick] (sciatac-seq) -- (pre_dsciatac-seq);
 \draw[] (scirna-seq) to[out=330, in=140] (sci-car);
+\draw[] (scirna-seq) -- (sci-l3);
 \draw[] (sciatac-seq) -- (sci-car);
 % \draw[] (sciatac-seq) to[out=210, in=0] (scirna-seq);
 \end{forest}
