@@ -38,21 +38,22 @@
 
 	\vspace{1.5cm}
 
-	{\large Curated by Aertslab}\\
+	{\large Curated by Florian De Rop}\\
+	\medskip
+	{\large Aerts Lab}\\
 	\medskip
 	{\large Latest version on \href{https://github.com/aertslab/scforest}{github.com/aertslab/scforest}}\\
 	\medskip
 	{\large \today}
 	\vfill
 
-	\includegraphics[width=0.4\textwidth]{kuleuven.jpeg}
-
-	Lab of Computational Biology\\
+	\includegraphics[width=0.4\textwidth]{kuleuven.jpeg}\\
+	\medskip
 	KU Leuven/VIB\\
 \end{center}
 \end{titlepage}
 
-\eject \pdfpagewidth=160cm \pdfpageheight=60cm
+\eject \pdfpagewidth=180cm \pdfpageheight=60cm
 \newgeometry{layout=a0paper}
 \forestset{sctree/.style={for tree={anchor=center, align=center, inner sep=0pt, edge=thick}}}
 \forestset{
@@ -75,7 +76,7 @@
 \newpage
 \begin{center}
 \begin{forest}, sctree, calign=center
-[, empty, calign=tight
+[, empty, calign=center
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 [, empty, no edge, tier=base[, empty, no edge
 	[\textbf{\large{1992}}, no edge, name=1992l, tier=1992[, empty, no edge, tier=1992b
@@ -95,22 +96,35 @@
 	[\textbf{\large{2019}}, no edge, tier=2019[, empty, no edge, tier=2019b
 	]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% transcriptomics
+% proteomics
+[, no edge, fit=band, tier=2019b, name=sep_proteomics]
+	[, empty, no edge, name=prereap-seq[\href{https://www.nature.com/articles/nbt.3973}{\textbf{REAP-seq\textsuperscript{\textbf{\large{+}}}}}\\\citealt{peterson2017}, no edge, fit=tight, name=reap-seq, tier=2017]]
+	[, empty, no edge, fit=band[\href{https://www.nature.com/articles/nmeth.4380}{\textbf{CITE-seq\textsuperscript{\textbf{\large{+}}}}}\\\citealt{stoeckius2017}, no edge, fit=band, name=cite-seq, tier=2017
+		[, empty, no edge[\href{https://www.nature.com/articles/s41467-018-07115-y}{\textbf{Pi-ATAC\textsuperscript{\textbf{\large{+}}}}}\\\citealt{chen2018a}, no edge, fit=band, name=pi-atac, tier=2018]]
+	]]
+% spatial transcriptomics
 [, no edge, fit=band, tier=2019b, name=sep_transcriptomics]
 [, no edge, calign=center, tier=base
-	[, empty, no edge[\href{https://www.cell.com/neuron/fulltext/S0896-6273(16)30702-4}{\textbf{seqFISH\textsuperscript{\large{\textmu}}}}\\\citealt{shah2016}, no edge, fit=tight, name=seqfish, tier=2016
-		[\href{https://www.nature.com/articles/s41586-019-1049-y}{\textbf{seqFISH+\textsuperscript{\large{\textmu}}}}\\\citealt{eng2019}, edge, fit=tight, tier=2019]
-	]]
 	[, empty, no edge[\href{https://science.sciencemag.org/content/348/6233/aaa6090}{\textbf{MERFISH\textsuperscript{\large{\textmu}}}}\\\citealt{chen2015}, no edge, fit=tight, tier=2015
 		[\href{https://www.nature.com/articles/s41598-018-22297-7}{\textbf{Expansion\textsuperscript{\large{\textmu}}}}\\\href{https://www.nature.com/articles/s41598-018-22297-7}{\textbf{MERFISH}}\\\citealt{wang2018a}, fit=tight, tier=2018
 			[\href{https://www.nature.com/articles/s41598-019-43943-8}{\textbf{Branched\textsuperscript{\large{\textmu}}}}\\\href{https://www.nature.com/articles/s41598-019-43943-8}{\textbf{MERFISH}}\\\citealt{xia2019}, fit=tight, tier=2019]
 		]
 	]]
+	[, empty, no edge[\href{https://science.sciencemag.org/content/353/6294/78}{\textbf{Spatial\textsuperscript{\large{\textmu}}}}\\\href{https://science.sciencemag.org/content/353/6294/78}{\textbf{Transcriptomics}}\\\citealt{stahl2016}, no edge, fit=band, name=spatial_transcriptomics, tier=2016
+		[\href{https://www.nature.com/articles/s41592-019-0548-y}{\textbf{HDST\textsuperscript{\large{\textmu}}}}\\\citealt{vickovic2019}\\10x Genomics, commercial, fit=band, tier=2019]
+	]]
+	[, empty, no edge[\href{https://www.cell.com/neuron/fulltext/S0896-6273(16)30702-4}{\textbf{seqFISH\textsuperscript{\large{\textmu}}}}\\\citealt{shah2016}, no edge, fit=band, name=seqfish, tier=2016
+		[\href{https://www.nature.com/articles/s41586-019-1049-y}{\textbf{seqFISH+\textsuperscript{\large{\textmu}}}}\\\citealt{eng2019}, edge, fit=band, tier=2019]
+	]]
 	[, empty, no edge[\href{https://science.sciencemag.org/content/361/6400/eaat5691}{\textbf{STARmap\textsuperscript{\large{\textmu}}}}\\\citealt{wang2018b}, no edge, fit=band, name=starmap, tier=2018
 			[\href{https://science.sciencemag.org/content/363/6434/1463}{\textbf{Slide-seq\textsuperscript{\large{\textmu}}}}\\\citealt{rodriques2019}, no edge, fit=band, tier=2019]
 	]]
-	[, empty, no edge[\href{https://www.nature.com/articles/s41592-019-0548-y}{\textbf{HDST\textsuperscript{\large{\textmu}}}}\\\citealt{vickovic2019}, no edge, fit=band, tier=2019]]
 	[, no edge, fit=band, tier=2019b, name=sep_spatial_transcriptomics]
+% transcriptomics
+	[\href{https://www.nature.com/articles/ncomms13182}{\textbf{MASC-seq}}\\\citealt{vickovic2016}, no edge, fit=band, tier=2013]
+	[\href{https://genomebiology.biomedcentral.com/articles/10.1186/gb-2013-14-4-r31}{\textbf{Quartz-seq}}\\\citealt{sasagawa2013}, no edge, fit=tight, tier=2013
+		[, empty[\href{https://genomebiology.biomedcentral.com/articles/10.1186/s13059-018-1407-3}{\textbf{Quartz-seq2}}\\\citealt{sasagawa2018}, fit=tight, tier=2018]]
+	]
 	[\href{https://www.pnas.org/content/89/7/3010}{\textbf{Eberwine}}\\\citealt{eberwine1992}, no edge, fit=tight, tier=1992
 	[\href{https://www.cell.com/cell-reports/fulltext/S2211-1247(12)00228-8}{\textbf{CEL-seq}}\\\citealt{hashimshony2012}, edge=dotted, fit=tight, calign=child, calign child=2, tier=2012
 		[, empty, edge=dotted[\href{https://science.sciencemag.org/content/343/6172/776}{\textbf{MARS-seq}}\\\citealt{jaitin2014}, edge=dotted, fit=tight, tier=2014
@@ -122,23 +136,22 @@
 		[, empty, edge=dotted, fit=tight[\textbf{inDrop}\\\citealt{klein2015}, edge=dotted, calign=child, calign child=2, name=indrop, tier=2015
 			[\textbf{inDrop}\\1CellBio 2016, commercial, fit=band,  tier=2016]
 			[\href{https://www.nature.com/articles/nprot.2016.154}{\textbf{inDrop}}\\\citealt{zilionis2017}, fit=band, tier=2017
-				[\href{https://science.sciencemag.org/content/360/6385/176}{\textbf{SPLiT-seq}}\\\citealt{rosenberg2018}, no edge, fit=tight, tier=2018]]
-			%[\textbf{}\\ Droplet Genomics 2016]
+				[\href{https://science.sciencemag.org/content/360/6385/176}{\textbf{SPLiT-seq}}\\\citealt{rosenberg2018}, no edge, fit=tight, tier=2018]
+			]
 		]]
 	]]
-	[\href{https://genomebiology.biomedcentral.com/articles/10.1186/gb-2013-14-4-r31}{\textbf{Quartz-seq}}\\\citealt{sasagawa2013}, no edge, fit=tight, tier=2013
-		[, empty[\href{https://genomebiology.biomedcentral.com/articles/10.1186/s13059-018-1407-3}{\textbf{Quartz-seq2}}\\\citealt{sasagawa2018}, fit=tight, tier=2018]]
-	]
+	[, empty, no edge[\href{https://www.sciencedirect.com/science/article/pii/S009286741631610}{\textbf{Perturb-seq}}\\\citealt{dixit2016}, no edge, fit=tight, name=perturb-seq, tier=2016]]
 	[\href{https://academic.oup.com/nar/article/34/5/e42/1146394}{\textbf{scMicroarray}}\\\citealt{kurimoto2006}, no edge, fit=tight, tier=2006
 	[\href{https://www.nature.com/articles/nprot.2007.79}{\textbf{scMicroarray}}\\\citealt{kurimoto2007}, tier=2007
 	[\href{https://www.nature.com/articles/nmeth.1315}{\textbf{mRNA-seq}}\\\citealt{tang2009}, edge=dotted, calign=child, calign child=3, fit=tight, tier=2009
-		[, empty, edge=dotted[\href{https://www.pnas.org/content/111/19/7048.long}{\textbf{Microfluidic}}\\\href{https://www.pnas.org/content/111/19/7048.long}
+		[, empty, edge=dotted, tier=2011[\href{https://www.pnas.org/content/111/19/7048.long}{\textbf{Microfluidic}}\\\href{https://www.pnas.org/content/111/19/7048.long}
 		{\textbf{mRNA-seq}}\\\citealt{streets2014}, edge=dotted, fit=tight, tier=2014
 			[, empty, no edge[\href{https://science.sciencemag.org/content/347/6222/1258367.figures-only}{\textbf{CytoSeq}}\\\citealt{fan2015}, no edge, fit=tight, tier=2015
-				[\textbf{Chromium}\\10x Genomics 2016, no edge, fit=tight, name=chromium, tier=2016
-					[, empty, edge=dotted[\href{https://www.nature.com/articles/s41467-019-11049-4}{\textbf{RAGE-seq}}\\\citealt{singh2019}, edge=dotted, fit=tight, name=rage-seq, tier=2019]]
-					[, empty, edge=dotted, name=prereap-seq[\href{https://www.nature.com/articles/nbt.3973}{\textbf{REAP-seq\textsuperscript{\textbf{\large{+}}}}}\\\citealt{peterson2017}, edge=dotted, fit=tight, name=reap-seq, tier=2017]]
-				]
+				[, empty, no edge[\textbf{Chromium}\\10x Genomics, no edge, fit=tight, name=chromium2016, tier=2016
+					[, empty[\textbf{\href{https://www.nature.com/articles/ncomms14049}{Chromium}}\\\citealt{zheng2017}\\10x Genomics, fit=tight, name=chromium2017, tier=2017
+						[, empty, edge=dotted[\href{https://www.nature.com/articles/s41467-019-11049-4}{\textbf{RAGE-seq}}\\\citealt{singh2019}, edge=dotted, fit=tight, name=rage-seq, tier=2019]]
+					]]
+				]]
 			]]
 		]]
 		[, empty, edge=dotted[\href{https://genome.cshlp.org/content/21/7/1160.long}{\textbf{STRT-seq}}\\\citealt{islam2011}, edge=dotted, fit=tight, name=strt-seq, tier=2011
@@ -154,7 +167,7 @@
 		]]
 		[, empty, edge=dotted[\href{https://genomebiology.biomedcentral.com/articles/10.1186/s13059-015-0706-1}{\textbf{SUPeR-seq}}\\\citealt{fan2015}, edge=dotted, fit=tight, tier=2015]]
 		[, empty[\href{https://www.nature.com/articles/nprot.2009.236}{\textbf{scRNA-seq}}\\\citealt{tang2010}, fit=tight, tier=2010]]
-		[, empty, edge=dotted[\href{https://www.nature.com/articles/nbt.2282}{\textbf{Smart-seq}}\\\citealt{ramskold2012}, edge=dotted, calign=child, calign child=2, name=smart-seq, tier=2012
+		[, empty, edge=dotted, tier=2010[\href{https://www.nature.com/articles/nbt.2282}{\textbf{Smart-seq}}\\\citealt{ramskold2012}, edge=dotted, calign=child, calign child=2, name=smart-seq, tier=2012
 			[, empty, no edge[\href{https://www.nature.com/articles/nmeth.2694}{\textbf{C1 scRNA-seq}}\\\citealt{wu2013}\\Fluidigm, no edge, fit=tight, name=c1_scrna-seq, tier=2013
 				[, empty, no edge[\href{https://www.nature.com/articles/nbt.2967}{\textbf{C1 scRNA-seq}}\\\citealt{pollen2014}\\Fluidigm, no edge, fit=tight, name=c1_scrna-seq2, tier=2014]]
 			]]
@@ -173,7 +186,8 @@
 					]]
 					[, empty, edge=dotted[\href{https://pubs.rsc.org/en/content/articlelanding/2019/lc/c9lc00014c}{\textbf{Simplified Drop-seq}}\\\citealt{biocanin2019}, edge=dotted, fit=tight, tier=2019]]
 					[, empty, edge=dotted, tier=2016[\href{https://www.nature.com/articles/nmeth.4177}{\textbf{CROP-seq}}\\\citealt{datlinger2017}, edge=dotted, fit=tight, tier=2017]]
-					[, empty, edge=dotted, tier=2016b[\href{https://www.nature.com/articles/nbt.4038}{\textbf{snDrop-seq}}\\\citealt{lake2017}, edge=dotted, fit=tight, name=scTHS-seq, tier=2017]]
+					[, empty, edge=dotted, tier=2016b[\href{https://www.sciencedirect.com/science/article/pii/S1097276517301740}{\textbf{Mosaic-seq}}\\\citealt{xie2017}, edge=dotted, fit=tight, name=mosaic-seq, tier=2017]]
+					[, empty, edge=dotted, tier=2016b[\href{https://www.nature.com/articles/nbt.4038}{\textbf{snDrop-seq}}\\\citealt{lake2017}, edge=dotted, fit=tight, name=sndrop-seq, tier=2017]]
 				]]
 			]]
 		]]
@@ -184,16 +198,18 @@
 % multiomics
 [, no edge, tier=2012, tier=base
 	[, empty, no edge, fit=band, name=sep_multiomics, tier=2019b]
-	[, empty, no edge, name=presnare-seq, tier=2017[\href{https://www.biorxiv.org/content/10.1101/692608v1}{\textbf{SNARE-seq\textsuperscript{\textbf{\large{+}}}}}\\\citealt{chen2019}, edge=dotted, fit=band, tier=2019]]
+	[, empty, no edge[\href{https://www.nature.com/articles/nmeth.3370}{\textbf{DR-seq\textsuperscript{\textbf{\large{+}}}}}\\\citealt{dey2015}, no edge, fit=band, name=dr-seq, tier=2015, calign=child, calign child=1
+		[, empty, no edge, name=presnare-seq, tier=2017[\href{https://www.biorxiv.org/content/10.1101/692608v1}{\textbf{SNARE-seq\textsuperscript{\textbf{\large{+}}}}}\\\citealt{chen2019}, edge=dotted, fit=band, tier=2019]]
+	]]
 	[, empty, no edge[\href{https://www.nature.com/articles/nmeth.3370}{\textbf{G{\&}T-seq\textsuperscript{\textbf{\large{+}}}}}\\\citealt{macaulay2015}, no edge, fit=band, name=gt-seq, tier=2015, calign=child, calign child=1
 		[, empty[\href{https://www.nature.com/articles/nprot.2016.138}{\textbf{G{\&}T-seq\textsuperscript{\textbf{\large{+}}}}}\\\citealt{macaulay2016}, fit=tight, tier=2016
-			[, empty, no edge, fit=band[\href{https://www.nature.com/articles/nmeth.4380}{\textbf{CITE-seq\textsuperscript{\textbf{\large{+}}}}}\\\citealt{stoeckius2017}, no edge, fit=tight, name=cite-seq, tier=2017
-				[, empty, no edge, fit=band[\href{https://www.sciencedirect.com/science/article/abs/pii/S1097276519306185}{\textbf{sci-L3\textsuperscript{\textbf{\large{+}}}}}\\\citealt{yin2019}, no edge, fit=tight, name=sci-l3, tier=2019]]
-			]]
+			[, empty, no edge, fit=band[\href{https://www.sciencedirect.com/science/article/abs/pii/S1097276519306185}{\textbf{sci-L3\textsuperscript{\textbf{\large{+}}}}}\\\citealt{yin2019}, no edge, fit=tight, name=sci-l3, tier=2019]]
 		]]
 	]]
-	[, empty, no edge[\href{https://www.nature.com/articles/nmeth.3728}{\textbf{scM\&T-seq\textsuperscript{\textbf{\large{+}}}}}\\\citealt{angermueller2016}, no edge, fit=tight, name=scmt-seq, tier=2016
-		[, empty[\href{https://www.nature.com/articles/s41467-018-03149-4}{\textbf{scNMT-seq\textsuperscript{\textbf{\large{+}}}}}\\\citealt{clark2018}, fit=tight, name=scnmt-seq, tier=2018]]
+	[, empty, no edge[\href{https://www.sciencedirect.com/science/article/pii/S0027510715000044}{\textbf{SCTG\textsuperscript{\textbf{\large{+}}}}}\\\citealt{Li2015}, no edge, fit=tight, name=SCTG, tier=2015
+		[, empty, no edge[\href{https://www.nature.com/articles/nmeth.3728}{\textbf{scM\&T-seq\textsuperscript{\textbf{\large{+}}}}}\\\citealt{angermueller2016}, no edge, fit=tight, name=scmt-seq, tier=2016
+			[, empty[\href{https://www.nature.com/articles/s41467-018-03149-4}{\textbf{scNMT-seq\textsuperscript{\textbf{\large{+}}}}}\\\citealt{clark2018}, fit=tight, name=scnmt-seq, tier=2018]]
+		]]
 	]]
 	[, empty, no edge[\href{https://www.nature.com/articles/cr201623}{\textbf{scTRIO-seq\textsuperscript{\textbf{\large{+}}}}}\\\citealt{hou2016}, no edge, fit=tight, name=sctrio-seq, tier=2016
 		[, empty, no edge[\href{https://elifesciences.org/articles/23203}{\textbf{scNOMe-seq\textsuperscript{\textbf{\large{+}}}}}\\\citealt{pott2017}, no edge, fit=tight, name=scnome-seq, tier=2017
@@ -210,24 +226,27 @@
 	[, empty, no edge[\href{https://www.nature.com/articles/nmeth.3035}{\textbf{scBS-seq}}\\\citealt{smallwood2014}, no edge, fit=band, name=scbs-seq, tier=2014
 		[\href{https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3847781/}{\textbf{scRRBS-seq}}\\\citealt{guo2015}, no edge, fit=band, name=scrrbs-seq, tier=2015]
 	]]
+	[, empty, no edge[\href{https://www.cell.com/cell-reports/fulltext/S2211-1247(15)00109-6}{\textbf{scWGBS}}\\\citealt{farlik2015}, no edge, fit=band, name=scwgbs, tier=2015]]
 	[, empty, no edge[\href{https://www.nature.com/articles/nmeth.2688}{\textbf{ATAC-seq\textsuperscript{\large{*}}}}\\\citealt{buenrostro2013}, no edge, calign=child, calign child=3, fit=tight, name=atac-seq, tier=2013
-		[, empty[\href{https://www.nature.com/articles/nmeth.4396}{\textbf{Omni-ATAC\textsuperscript{\large{*}}}}\\\citealt{corces2017}, fit=band, name=omni-atac, tier=2017
-			[, empty, edge=dotted[\href{https://www.nature.com/articles/s41467-018-07771-0}{\textbf{scATAC-seq}}\\\citealt{chen2018}, edge=dotted, fit=tight, tier=2018]]
+		[, empty, tier=2014b[\href{https://www.nature.com/articles/nmeth.4396}{\textbf{Omni-ATAC\textsuperscript{\large{*}}}}\\\citealt{corces2017}, fit=band, name=omni-atac, tier=2017
+			[, empty, edge=dotted[\href{https://www.nature.com/articles/s41467-018-07771-0}{\textbf{scATAC-seq}}\\\citealt{chen2018b}, edge=dotted, fit=tight, tier=2018]]
 		]]
 		[, empty, edge=dotted, tier=2014b[\href{https://science.sciencemag.org/content/348/6237/910}{\textbf{sciATAC-seq}}\\\citealt{cusanovich2015}, edge=dotted, fit=tight, name=sciatac-seq, tier=2015
-			[, empty, edge=dotted[\href{https://www.nature.com/articles/nbt.4038}{\textbf{scTHS-seq}}\\\citealt{lake2017}, edge=dotted, fit=tight, name=scTHS-seq, tier=2018]]
+			[, empty, edge=dotted[\href{https://www.nature.com/articles/nbt.4038}{\textbf{scTHS-seq}}\\\citealt{lake2017}, edge=dotted, fit=tight, name=scths-seq, tier=2018]]
 			[, empty, edge=dotted[\href{https://www.nature.com/articles/s41593-018-0079-3}{\textbf{snATAC-seq}}\\\citealt{preissl2018}, edge=dotted, fit=tight, name=scnatac-seq, tier=2018]]
 		]]
+		[, empty, name=pre_dsciatac-seq, tier=2015b[\href{https://www.nature.com/articles/s41587-019-0147-6}{\textbf{dsciATAC-seq}}\\\citealt{lareau2019}, fit=tight, name=dsciatac-seq, tier=2019]]
 		[, no edge, empty, name=prec1_scatac-seq[\href{https://www.nature.com/articles/nature14590}{\textbf{C1 scATAC-seq}}\\\citealt{buenrostro2015}\\Fluidigm, no edge, fit=tight, name=c1_scatac-seq, tier=2015
-			[, empty, name=pre_dsciatac-seq[\href{https://www.nature.com/articles/s41587-019-0147-6}{\textbf{dsciATAC-seq}}\\\citealt{lareau2019}, fit=tight, name=dsciatac-seq, tier=2019]]
-			[, empty, name=prec1_scatac-seq[\href{https://www.nature.com/articles/nature14590}{\textbf{Perturb-ATAC}}\\\citealt{rubin2019}, fit=tight, name=perturb-atac, tier=2019]]
+			[, empty, name=pre_perturb-atac-seq[\href{https://www.nature.com/articles/nature14590}{\textbf{Perturb-ATAC}}\\\citealt{rubin2019}, fit=tight, name=perturb-atac, tier=2019]]
 		]]
-		[, no edge, empty, name=prec1_scatac-seq[\href{https://www.nature.com/articles/s41587-019-0206-z}{\textbf{scATAC-seq}}\\\citealt{satpathy2019}\\10x Genomics, no edge, fit=tight, name=10x_scatac-seq, tier=2019]]
-		[, edge=dotted, empty[\href{https://www.nature.com/articles/nmeth.4031}{\textbf{ATAC-see\textsuperscript{\large{\textmu}}}}\\\citealt{chen2016}, edge=dotted, fit=tight, tier=2016]]
+		[, no edge, empty, name=pre_10x_scatac-seq, tier=2015[\href{https://www.nature.com/articles/s41587-019-0206-z}{\textbf{scATAC-seq}}\\\citealt{satpathy2019}\\10x Genomics, no edge, fit=band, name=10x_scatac-seq, tier=2019]]
+		[, edge=dotted, empty, tier=2014b[\href{https://www.nature.com/articles/nmeth.4031}{\textbf{ATAC-see\textsuperscript{\large{\textmu}}}}\\\citealt{chen2016}, edge=dotted, fit=band, tier=2016]]
 	]]
-[, empty, no edge, [\href{https://www.nature.com/articles/nbt.3383}{\textbf{Drop-ChIP}}\\\citealt{rotem2015}, no edge, fit=band, tier=2015
-[, empty, no edge, [\href{https://www.nature.com/articles/s41556-019-0383-5}{\textbf{sc-itChIP-seq}}\\\citealt{ai2019}, no edge, fit=band, tier=2019]]
-]]
+	[, empty, no edge, [\href{https://www.sciencedirect.com/science/article/pii/S0092867415010922}{\textbf{scDam-ID}}\\\citealt{kind2015}, no edge, fit=band, tier=2015]]
+	[, empty, no edge, [\href{https://www.nature.com/articles/nature15740}{\textbf{scDNAse-seq}}\\\citealt{jin2015}, no edge, fit=band, tier=2015]]
+	[, empty, no edge, [\href{https://www.nature.com/articles/nbt.3383}{\textbf{Drop-ChIP}}\\\citealt{rotem2015}, no edge, fit=band, tier=2015
+		[, empty, no edge, [\href{https://www.nature.com/articles/s41556-019-0383-5}{\textbf{sc-itChIP-seq}}\\\citealt{ai2019}, no edge, fit=band, tier=2019]]
+	]]
 ]
 % genomics
 [, no edge, fit=band, tier=2019b, name=sep_genomics]
@@ -267,24 +286,26 @@
 \node at		(21.5, -8)		 	{\large\textbf{+}} 	(23, -8);
 \node[right] at 	(24, -8)			{\large Multiomic method};
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\draw[decoration={brace, amplitude=20pt, raise=38cm}, decorate, ultra thick] (sep_transcriptomics) ++ (+1cm, 0) -- node[above=39cm] {\Huge \textbf{Single Cell Technology}} ($(sep_final)+(-1cm, 0)$);
-\draw[decoration={brace, amplitude=20pt, raise=35cm}, decorate, ultra thick] (sep_transcriptomics) ++ (1cm, 0) -- node[above=36cm] {\Huge \textbf{Transcriptomics}} (sep_multiomics);
-\draw[decoration={brace, amplitude=20pt, raise=13cm}, decorate, ultra thick] (sep_transcriptomics) ++ (1cm, 0) -- node[above=14cm] {\Huge \textbf{Spatial}} (sep_spatial_transcriptomics);
+\draw[decoration={brace, amplitude=20pt, raise=38cm}, decorate, ultra thick] (sep_proteomics) -- node[above=39cm] {\Huge \textbf{Single Cell Technology}} ($(sep_final)+(-1cm, 0)$);
+\draw[decoration={brace, amplitude=20pt, raise=8cm}, decorate, ultra thick] ($(sep_proteomics)+(-0.5cm, 0)$) ++ (1cm, 0) -- node[above=9cm] {\Huge \textbf{Proteomics}} (sep_transcriptomics);
+\draw[decoration={brace, amplitude=20pt, raise=35cm}, decorate, ultra thick] (sep_transcriptomics) -- node[above=36cm] {\Huge \textbf{Transcriptomics}} (sep_multiomics);
+\draw[decoration={brace, amplitude=20pt, raise=13cm}, decorate, ultra thick] (sep_transcriptomics) -- node[above=14cm] {\Huge \textbf{Spatial Transcriptomics}} (sep_spatial_transcriptomics);
 \draw[decoration={brace, amplitude=20pt, raise=12cm}, decorate, ultra thick] (sep_multiomics) -- node[above=13cm] {\Huge \textbf{Multiomics}} (sep_epigenomics);
 \draw[decoration={brace, amplitude=20pt, raise=17cm}, decorate, ultra thick] (sep_epigenomics) -- node[above=18cm] {\Huge \textbf{Epigenomics}} (sep_genomics);
 \draw[decoration={brace, amplitude=5pt, raise=8cm}, decorate, ultra thick] (sep_genomics) ++ (1cm, 0) -- node[above=9cm] {\Huge \textbf{Genomics}} ($(sep_final)+(-1cm, 0)$);
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \draw[dotted, ultra thick] (1992r.south) -- (2006r.north);
 \draw[dotted, ultra thick] (1992l.south) -- (2006l.north);
-\draw[squiggly] (smart-seq22.210) to[out=220, in=350] (chromium);
-\draw[squiggly] (indrop) -- (chromium);
+\draw[squiggly] (smart-seq22.210) to[out=220, in=350] (chromium2016);
+\draw[squiggly] (indrop) -- (chromium2016);
 \draw[squiggly] (smart-seq) -- (c1_scrna-seq);
 \draw[squiggly] (smart-seq2) -- (c1_scrna-seq2);
 \draw[squiggly] (c1_scrna-seq) -- (c1_scrna-seq2);
 \draw[squiggly] (atac-seq) -- (c1_scatac-seq);
-\draw[squiggly] (atac-seq) to[out=310, in=110] (10x_scatac-seq);
+\draw[squiggly] (atac-seq) -- (pre_10x_scatac-seq);
+\draw[squiggly] (pre_10x_scatac-seq) -- (10x_scatac-seq);
+\draw[dotted, thick] (chromium2016) -- (perturb-seq);
 \draw[dotted, thick] (drop-seq) -- (presnare-seq);
-\draw[dotted, thick] (drop-seq) -- (cite-seq);
 \draw[dotted, thick] (drop-seq) -- (dronc-seq);
 \draw[dotted, thick] (strt-seq.south) -- (smart-seq.north);
 \draw[dotted, thick] (smart-seq22) to[out=10, in=168] (sccat-seq);
@@ -297,7 +318,6 @@
 \draw[dotted, thick] (gt-seq) -- (sctrio-seq);
 \draw[dotted, thick] (scnome-seq) -- (scnmt-seq);
 \draw[dotted, thick] (scrrbs-seq) -- (sctrio-seq);
-\draw[dotted, thick] (c1_scrna-seq) -- (prereap-seq);
 \draw[dotted, thick] (sciatac-seq) -- (pre_dsciatac-seq);
 \draw[] (scirna-seq) to[out=330, in=140] (sci-car);
 \draw[] (scirna-seq) -- (sci-l3);
