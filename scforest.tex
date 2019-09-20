@@ -53,7 +53,7 @@
 \end{center}
 \end{titlepage}
 
-\eject \pdfpagewidth=180cm \pdfpageheight=60cm
+\eject \pdfpagewidth=190cm \pdfpageheight=60cm
 \newgeometry{layout=a0paper}
 \forestset{sctree/.style={for tree={anchor=center, align=center, inner sep=0pt, edge=thick}}}
 \forestset{
@@ -116,8 +116,14 @@
 	[, empty, no edge[\href{https://www.cell.com/neuron/fulltext/S0896-6273(16)30702-4}{\textbf{seqFISH\textsuperscript{\large{\textmu}}}}\\\citealt{shah2016}, no edge, fit=band, name=seqfish, tier=2016
 		[\href{https://www.nature.com/articles/s41586-019-1049-y}{\textbf{seqFISH+\textsuperscript{\large{\textmu}}}}\\\citealt{eng2019}, edge, fit=band, tier=2019]
 	]]
-	[, empty, no edge[\href{https://science.sciencemag.org/content/361/6400/eaat5691}{\textbf{STARmap\textsuperscript{\large{\textmu}}}}\\\citealt{wang2018b}, no edge, fit=band, name=starmap, tier=2018
-			[\href{https://science.sciencemag.org/content/363/6434/1463}{\textbf{Slide-seq\textsuperscript{\large{\textmu}}}}\\\citealt{rodriques2019}, no edge, fit=band, tier=2019]
+	[, empty, no edge[\href{https://science.sciencemag.org/content/343/6177/1360.long}{\textbf{FISSEQ\textsuperscript{\large{\textmu}}}}\\\citealt{lee2014}, no edge, fit=band, tier=2014
+		[, empty[\href{https://www.nature.com/articles/nprot.2014.191}{\textbf{FISSEQ\textsuperscript{\large{\textmu}}}}\\\citealt{lee2015}, fit=band, tier=2015
+			[, empty, no edge[\href{https://currentprotocols.onlinelibrary.wiley.com/doi/pdf/10.1002/cpmb.44}{\textbf{subRNA-seq\textsuperscript{\large{\textmu}}}}\\\citealt{mayer2017}, no edge, fit=band, tier=2017
+				[, empty, no edge[\href{https://science.sciencemag.org/content/361/6400/eaat5691}{\textbf{STARmap\textsuperscript{\large{\textmu}}}}\\\citealt{wang2018b}, no edge, fit=band, name=starmap, tier=2018
+					[\href{https://science.sciencemag.org/content/363/6434/1463}{\textbf{Slide-seq\textsuperscript{\large{\textmu}}}}\\\citealt{rodriques2019}, no edge, fit=band, tier=2019]
+				]]
+			]]
+		]]
 	]]
 	[, no edge, fit=band, tier=2019b, name=sep_spatial_transcriptomics]
 % transcriptomics
@@ -169,7 +175,9 @@
 		[, empty[\href{https://www.nature.com/articles/nprot.2009.236}{\textbf{scRNA-seq}}\\\citealt{tang2010}, fit=tight, tier=2010]]
 		[, empty, edge=dotted, tier=2010[\href{https://www.nature.com/articles/nbt.2282}{\textbf{Smart-seq}}\\\citealt{ramskold2012}, edge=dotted, calign=child, calign child=2, name=smart-seq, tier=2012
 			[, empty, no edge[\href{https://www.nature.com/articles/nmeth.2694}{\textbf{C1 scRNA-seq}}\\\citealt{wu2013}\\Fluidigm, no edge, fit=tight, name=c1_scrna-seq, tier=2013
-				[, empty, no edge[\href{https://www.nature.com/articles/nbt.2967}{\textbf{C1 scRNA-seq}}\\\citealt{pollen2014}\\Fluidigm, no edge, fit=tight, name=c1_scrna-seq2, tier=2014]]
+				[, empty, no edge[\href{https://www.nature.com/articles/nbt.2967}{\textbf{C1 scRNA-seq}}\\\citealt{pollen2014}\\Fluidigm, no edge, fit=tight, name=c1_scrna-seq2, tier=2014
+					[, empty, edge=dotted[\href{https://www.nature.com/articles/s41598-017-04426-w}{\textbf{SNS}}\\\citealt{lake2017}, edge=dotted, fit=tight, name=sns, tier=2017]]
+					]]
 			]]
 			[, empty[\href{https://www.nature.com/articles/nmeth.2639}{\textbf{Smart-seq2}}\\\citealt{picelli2013}, calign=child, calign child=1, fit=tight, name=smart-seq2, tier=2013
 				[, empty[\href{https://www.nature.com/articles/nprot.2014.006}{\textbf{Smart-seq2}}\\\citealt{picelli2014}, fit=tight, name=smart-seq22, tier=2014
@@ -187,7 +195,7 @@
 					[, empty, edge=dotted[\href{https://pubs.rsc.org/en/content/articlelanding/2019/lc/c9lc00014c}{\textbf{Simplified Drop-seq}}\\\citealt{biocanin2019}, edge=dotted, fit=tight, tier=2019]]
 					[, empty, edge=dotted, tier=2016[\href{https://www.nature.com/articles/nmeth.4177}{\textbf{CROP-seq}}\\\citealt{datlinger2017}, edge=dotted, fit=tight, tier=2017]]
 					[, empty, edge=dotted, tier=2016b[\href{https://www.sciencedirect.com/science/article/pii/S1097276517301740}{\textbf{Mosaic-seq}}\\\citealt{xie2017}, edge=dotted, fit=tight, name=mosaic-seq, tier=2017]]
-					[, empty, edge=dotted, tier=2016b[\href{https://www.nature.com/articles/nbt.4038}{\textbf{snDrop-seq}}\\\citealt{lake2017}, edge=dotted, fit=tight, name=sndrop-seq, tier=2017]]
+					[, empty, edge=dotted, tier=2016b[\href{https://www.nature.com/articles/nbt.4038}{\textbf{snDrop-seq}}\\\citealt{lake2017a}, edge=dotted, fit=tight, name=sndrop-seq, tier=2017]]
 				]]
 			]]
 		]]
@@ -208,7 +216,9 @@
 	]]
 	[, empty, no edge[\href{https://www.sciencedirect.com/science/article/pii/S0027510715000044}{\textbf{SCTG\textsuperscript{\textbf{\large{+}}}}}\\\citealt{Li2015}, no edge, fit=tight, name=SCTG, tier=2015
 		[, empty, no edge[\href{https://www.nature.com/articles/nmeth.3728}{\textbf{scM\&T-seq\textsuperscript{\textbf{\large{+}}}}}\\\citealt{angermueller2016}, no edge, fit=tight, name=scmt-seq, tier=2016
-			[, empty[\href{https://www.nature.com/articles/s41467-018-03149-4}{\textbf{scNMT-seq\textsuperscript{\textbf{\large{+}}}}}\\\citealt{clark2018}, fit=tight, name=scnmt-seq, tier=2018]]
+			[, empty[\href{https://www.nature.com/articles/s41467-018-03149-4}{\textbf{scNMT-seq\textsuperscript{\textbf{\large{+}}}}}\\\citealt{clark2018}, fit=tight, name=scnmt-seq, tier=2018
+				[, empty, no edge[\href{https://www.nature.com/articles/s41592-019-0502-z}{\textbf{scMethylHiC\textsuperscript{\textbf{\large{+}}}}}\\\citealt{li2019}, no edge, fit=tight, name=scmethylhic, tier=2019]]
+			]]
 		]]
 	]]
 	[, empty, no edge[\href{https://www.nature.com/articles/cr201623}{\textbf{scTRIO-seq\textsuperscript{\textbf{\large{+}}}}}\\\citealt{hou2016}, no edge, fit=tight, name=sctrio-seq, tier=2016
@@ -232,7 +242,7 @@
 			[, empty, edge=dotted[\href{https://www.nature.com/articles/s41467-018-07771-0}{\textbf{scATAC-seq}}\\\citealt{chen2018b}, edge=dotted, fit=tight, tier=2018]]
 		]]
 		[, empty, edge=dotted, tier=2014b[\href{https://science.sciencemag.org/content/348/6237/910}{\textbf{sciATAC-seq}}\\\citealt{cusanovich2015}, edge=dotted, fit=tight, name=sciatac-seq, tier=2015
-			[, empty, edge=dotted[\href{https://www.nature.com/articles/nbt.4038}{\textbf{scTHS-seq}}\\\citealt{lake2017}, edge=dotted, fit=tight, name=scths-seq, tier=2018]]
+			[, empty, edge=dotted[\href{https://www.nature.com/articles/nbt.4038}{\textbf{scTHS-seq}}\\\citealt{lake2017b}, edge=dotted, fit=tight, name=scths-seq, tier=2017]]
 			[, empty, edge=dotted[\href{https://www.nature.com/articles/s41593-018-0079-3}{\textbf{snATAC-seq}}\\\citealt{preissl2018}, edge=dotted, fit=tight, name=scnatac-seq, tier=2018]]
 		]]
 		[, empty, name=pre_dsciatac-seq, tier=2015b[\href{https://www.nature.com/articles/s41587-019-0147-6}{\textbf{dsciATAC-seq}}\\\citealt{lareau2019}, fit=tight, name=dsciatac-seq, tier=2019]]
@@ -251,7 +261,10 @@
 % genomics
 [, no edge, fit=band, tier=2019b, name=sep_genomics]
 [, no edge, calign=center, tier=base
-	[\href{https://www.nature.com/articles/nbt.3880}{\textbf{SiC-seq}}\\\citealt{lan2017}, no edge, fit=band, tier=2017]
+	[, empty, no edge[\href{https://science.sciencemag.org/content/356/6334/189}{\textbf{LIANTI}}\\\citealt{chen2017}, no edge, fit=band, name=LIANTI, tier=2017]]
+	[, empty, no edge[\href{https://www.nature.com/articles/nmeth.4140}{\textbf{DLP}}\\\citealt{zahn2017}, no edge, fit=band, tier=2017]]
+	[, empty, no edge[\href{https://www.nature.com/articles/nbt.3880}{\textbf{SiC-seq}}\\\citealt{lan2017}, no edge, fit=band, tier=2017]]
+	[, empty, no edge[\href{https://www.nature.com/articles/nmeth.4154}{\textbf{SCI-seq}}\\\citealt{vitak2017}, no edge, fit=band, name=sci-seq, tier=2017]]
 ]
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 [, no edge, fit=band, tier=2019b, name=sep_final]
@@ -289,10 +302,10 @@
 \draw[decoration={brace, amplitude=20pt, raise=38cm}, decorate, ultra thick] (sep_proteomics) -- node[above=39cm] {\Huge \textbf{Single Cell Technology}} ($(sep_final)+(-1cm, 0)$);
 \draw[decoration={brace, amplitude=20pt, raise=8cm}, decorate, ultra thick] ($(sep_proteomics)+(-0.5cm, 0)$) ++ (1cm, 0) -- node[above=9cm] {\Huge \textbf{Proteomics}} (sep_transcriptomics);
 \draw[decoration={brace, amplitude=20pt, raise=35cm}, decorate, ultra thick] (sep_transcriptomics) -- node[above=36cm] {\Huge \textbf{Transcriptomics}} (sep_multiomics);
-\draw[decoration={brace, amplitude=20pt, raise=13cm}, decorate, ultra thick] (sep_transcriptomics) -- node[above=14cm] {\Huge \textbf{Spatial Transcriptomics}} (sep_spatial_transcriptomics);
+\draw[decoration={brace, amplitude=20pt, raise=15cm}, decorate, ultra thick] (sep_transcriptomics) -- node[above=16cm] {\Huge \textbf{Spatial Transcriptomics}} (sep_spatial_transcriptomics);
 \draw[decoration={brace, amplitude=20pt, raise=12cm}, decorate, ultra thick] (sep_multiomics) -- node[above=13cm] {\Huge \textbf{Multiomics}} (sep_epigenomics);
 \draw[decoration={brace, amplitude=20pt, raise=17cm}, decorate, ultra thick] (sep_epigenomics) -- node[above=18cm] {\Huge \textbf{Epigenomics}} (sep_genomics);
-\draw[decoration={brace, amplitude=5pt, raise=8cm}, decorate, ultra thick] (sep_genomics) ++ (1cm, 0) -- node[above=9cm] {\Huge \textbf{Genomics}} ($(sep_final)+(-1cm, 0)$);
+\draw[decoration={brace, amplitude=20pt, raise=8cm}, decorate, ultra thick] (sep_genomics) -- node[above=9cm] {\Huge \textbf{Genomics}} ($(sep_final)+(-0cm, 0)$);
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \draw[dotted, ultra thick] (1992r.south) -- (2006r.north);
 \draw[dotted, ultra thick] (1992l.south) -- (2006l.north);
