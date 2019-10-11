@@ -40,11 +40,11 @@
 
 	{\large Curated by Florian De Rop}\\
 	\medskip
-	{\large Aerts Lab}\\
+	{\large \href{https://www.aertslab.org/}{Aerts Lab}}\\
 	\medskip
-	{\large Latest version on \href{https://github.com/aertslab/scforest}{github.com/aertslab/scforest}}\\
+	{\large \today}\\
 	\medskip
-	{\large \today}
+	{\large Updated version on \href{https://github.com/aertslab/scforest}{github.com/aertslab/scforest}}\\
 	\vfill
 
 	\includegraphics[width=0.4\textwidth]{kuleuven.jpeg}\\
@@ -149,7 +149,7 @@
 	[, empty, no edge[\href{https://www.sciencedirect.com/science/article/pii/S009286741631610}{\textbf{Perturb-seq}}\\\citealt{dixit2016}, no edge, fit=tight, name=perturb-seq, tier=2016]]
 	[\href{https://academic.oup.com/nar/article/34/5/e42/1146394}{\textbf{scMicroarray}}\\\citealt{kurimoto2006}, no edge, fit=tight, tier=2006
 	[\href{https://www.nature.com/articles/nprot.2007.79}{\textbf{scMicroarray}}\\\citealt{kurimoto2007}, tier=2007
-	[\href{https://www.nature.com/articles/nmeth.1315}{\textbf{mRNA-seq}}\\\citealt{tang2009}, edge=dotted, calign=child, calign child=3, fit=tight, tier=2009
+	[\href{https://www.nature.com/articles/nmeth.1315}{\textbf{mRNA-seq}}\\\citealt{tang2009}, edge=dotted, calign=child, calign child=3, fit=tight, name=mrna-seq, tier=2009
 		[, empty, edge=dotted, tier=2011[\href{https://www.pnas.org/content/111/19/7048.long}{\textbf{Microfluidic}}\\\href{https://www.pnas.org/content/111/19/7048.long}
 		{\textbf{mRNA-seq}}\\\citealt{streets2014}, edge=dotted, fit=tight, tier=2014
 			[, empty, no edge[\href{https://science.sciencemag.org/content/347/6222/1258367.figures-only}{\textbf{CytoSeq}}\\\citealt{fan2015}, no edge, fit=tight, tier=2015
@@ -168,7 +168,7 @@
 					]]
 				]]
 				[, empty[\href{https://www.nature.com/articles/s41598-017-16546-4}{\textbf{STRT-seq-2i}}\\\citealt{hochgerner2017}, fit=tight, tier=2017
-					[, empty, no edge[\href{https://www.nature.com/articles/s41598-017-16546-4}{\textbf{RamDA-seq}}\\\citealt{hayashi2018}, no edge, fit=tight, tier=2018]]
+					[, empty, no edge[\href{https://doi.org/10.1038/s41467-018-02866-0}{\textbf{RamDA-seq}}\\\citealt{hayashi2018}, no edge, fit=tight, tier=2018]]
 				]]
 			]
 		]]
@@ -200,8 +200,9 @@
 				]]
 			]]
 		]]
-	]]
+	]] % kurimoto papers
 	]
+	[, no edge, empty[\href{https://doi.org/10.1038/nmeth.1226}{\textbf{RNA-seq\textsuperscript{\textbf{\large{*}}}}}\\\citealt{mortazavi2008}, no edge, fit=tight, name=rna-seq, tier=2008]]
 	[, empty, no edge, tier=2013, name=prescirna-seq[\href{https://science.sciencemag.org/content/357/6352/661}{\textbf{sciRNA-seq}}\\\citealt{cao2017}, no edge, fit=band, name=scirna-seq, tier=2017]]
 ]
 % multiomics
@@ -318,6 +319,7 @@
 \draw[squiggly] (atac-seq) -- (c1_scatac-seq);
 \draw[squiggly] (atac-seq) -- (pre_10x_scatac-seq);
 \draw[squiggly] (pre_10x_scatac-seq) -- (10x_scatac-seq);
+\draw[dotted, thick] (rna-seq) -- (mrna-seq);
 \draw[dotted, thick] (chromium2016) -- (perturb-seq);
 \draw[dotted, thick] (drop-seq) -- (presnare-seq);
 \draw[dotted, thick] (drop-seq) -- (dronc-seq);
