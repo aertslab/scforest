@@ -15,6 +15,7 @@
 # unnecessary
 *.sty
 *.bst
+.gitignore
 
 ## Intermediate documents:
 *.dvi
