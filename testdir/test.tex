@@ -1,0 +1,27 @@
+\documentclass[12pt, a4]{article}
+\usepackage{forest}
+\usepackage[utf8]{inputenc}
+\usepackage[euler]{textgreek}
+\usepackage{natbib}
+\usepackage[pdfusetitle,hidelinks,plainpages=false]{hyperref}
+\hypersetup{
+    	colorlinks=true,
+    	urlcolor=.,
+	citecolor=.
+}
+
+\begin{document}
+\forestset{standardtight/.style n args={3}{align=center, content={\href{#3}{\textbf{#1}}\\\citealt{#2}}, no edge, fit=tight}}
+\begin{forest}
+	[Test
+		[a]
+		[b]
+		[c]
+			[, delay={standardtight/.process={___}{inDrop}{zilionis2017}{https://www.nature.com/articles/nprot.2016.154}}
+	]
+\end{forest}
+
+\bibliographystyle{humannat}
+\bibliography{scforest_bibliography.bib}
+
+\end{document}
